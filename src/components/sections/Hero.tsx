@@ -59,8 +59,7 @@ export function Hero() {
             <div className="mt-8 flex items-center gap-3 text-foam/80" data-rev style={delay(600)}>
               <Mark className="size-8" light />
               <p className="text-sm">
-                {PRESENTER.course} · 2026
-                {PRESENTER.name && <span className="text-foam"> · {PRESENTER.name}</span>}
+                {PRESENTER.course} · 2026 · <span className="text-foam">{PRESENTER.name}</span>, {PRESENTER.group}
               </p>
             </div>
           </div>

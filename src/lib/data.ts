@@ -3,14 +3,18 @@
 
 /** Ismingiz va guruhingizni yozing — bo‘sh qolsa, ko‘rsatilmaydi. */
 export const PRESENTER = {
-  name: "",
-  group: "",
-  course: "Iqtisodiyot fanidan taqdimot",
+  name: "Qodirova Ziyoda",
+  group: "85-25 I guruh",
+  university: "Farg‘ona davlat texnika universiteti",
+  faculty: "Ishlab chiqarishda boshqaruv fakulteti",
+  subject: "Iqtisodiy siyosat",
+  course: "«Iqtisodiy siyosat» fanidan taqdimot",
 }
 
-export type SectionId = "kirish" | "davlat" | "tarix" | "eksport" | "tabiat" | "bosim" | "taqqoslash" | "kelajak" | "xulosa"
+export type SectionId = "muqova" | "kirish" | "davlat" | "tarix" | "eksport" | "tabiat" | "bosim" | "taqqoslash" | "kelajak" | "xulosa"
 
 export const SECTIONS: { id: SectionId; label: string; gloss: string }[] = [
+  { id: "muqova", label: "Muqova", gloss: "Title" },
   { id: "kirish", label: "Kirish", gloss: "Welcome" },
   { id: "davlat", label: "Davlat", gloss: "Country" },
   { id: "tarix", label: "Tarix", gloss: "History" },

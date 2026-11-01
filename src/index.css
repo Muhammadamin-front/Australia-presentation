@@ -547,3 +547,60 @@ html.lenis body {
     opacity: 1;
   }
 }
+
+/* ── Cover: typewriter caret, Southern Cross rising, twinkling sky ── */
+.cover-caret {
+  display: inline-block;
+  width: 0.06em;
+  height: 0.95em;
+  margin-left: 0.04em;
+  margin-right: -0.1em;
+  vertical-align: -0.12em;
+  background: var(--color-wattle-light);
+}
+.cover-caret--idle {
+  animation: caret-blink 1.05s steps(1) infinite;
+}
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+.cover-draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: cover-draw 1.8s var(--ease-axis) forwards;
+}
+@keyframes cover-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.cover-star {
+  transform-box: view-box;
+  animation: cover-star 1s cubic-bezier(0.34, 1.45, 0.64, 1) both;
+}
+@keyframes cover-star {
+  from {
+    transform: scale(0) rotate(-60deg);
+    opacity: 0;
+  }
+}
+.cover-twinkle {
+  opacity: 0.25;
+  animation: cover-twinkle 3s ease-in-out infinite alternate;
+}
+@keyframes cover-twinkle {
+  to {
+    opacity: 0.85;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cover-draw,
+  .cover-star,
+  .cover-twinkle,
+  .cover-caret--idle {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}

@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { Presenter } from "@/components/Presenter"
 import { Rail } from "@/components/Rail"
 import { Bosim } from "@/components/sections/Bosim"
+import { Cover } from "@/components/sections/Cover"
 import { Davlat } from "@/components/sections/Davlat"
 import { Eksport } from "@/components/sections/Eksport"
 import { Finale } from "@/components/sections/Finale"
@@ -49,6 +50,7 @@ export default function App() {
       </a>
       <Rail />
       <main className="pt-12 lg:pt-0 lg:pl-[var(--rail)]">
+        <Cover />
         <Hero />
         <Davlat />
         <History />

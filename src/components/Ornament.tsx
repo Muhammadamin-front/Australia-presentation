@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils"
 
 /** Points of an n-pointed star polygon, centred on (cx, cy). */
-function starPoints(n: number, cx: number, cy: number, R: number, r: number) {
+export function starPoints(n: number, cx: number, cy: number, R: number, r: number) {
   const pts: string[] = []
   for (let i = 0; i < n * 2; i++) {
     const a = (Math.PI * i) / n - Math.PI / 2
@@ -12,7 +12,7 @@ function starPoints(n: number, cx: number, cy: number, R: number, r: number) {
 }
 
 /** The Southern Cross as on the national flag: Alpha, Beta, Gamma, Delta (7 points) and little Epsilon (5). */
-const CRUX = [
+export const CRUX = [
   { x: 20, y: 3.5, n: 7, R: 3.1 }, // Gamma (top)
   { x: 20, y: 21, n: 7, R: 3.5 }, // Alpha (bottom)
   { x: 10.5, y: 12.5, n: 7, R: 3.2 }, // Delta (left)

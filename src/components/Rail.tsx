@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
-import { Flag, History, Landmark, Mountain, Pickaxe, Scale, Sprout, Star as StarIcon, TrendingUp, type LucideIcon } from "lucide-react"
+import { BookOpen, Flag, History, Landmark, Mountain, Pickaxe, Scale, Sprout, Star as StarIcon, TrendingUp, type LucideIcon } from "lucide-react"
 import { PRESENTER, SECTIONS, type SectionId } from "@/lib/data"
 import { onScrollY, scrollToId, syncHash } from "@/lib/scroll"
 import { cn, pad2 } from "@/lib/utils"
 import { Mark, Star } from "./Ornament"
 
 const ICONS: Record<SectionId, LucideIcon> = {
+  muqova: BookOpen,
   kirish: StarIcon,
   davlat: Landmark,
   tarix: History,
@@ -47,8 +48,8 @@ export function Rail() {
     <>
       <aside className="fixed inset-y-0 left-0 z-40 hidden w-[var(--rail)] flex-col bg-ocean text-foam lg:flex">
         <a
-          href="#kirish"
-          onClick={(e) => (e.preventDefault(), scrollToId("kirish"))}
+          href="#muqova"
+          onClick={(e) => (e.preventDefault(), scrollToId("muqova"))}
           className="mx-4 mt-4 flex flex-col items-center gap-1.5 border-b border-wattle-light/30 px-2 pt-1 pb-4"
         >
           <Mark className="size-14" light />
